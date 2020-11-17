@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body  
+	{  
+		margin: 0;  
+		padding: 0;  
+		background-color:black;  
+		font-family: 'Helvetica';  
+	}  
+#students {
+
+	font-family: Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 382px;  
+	margin: left;  
+	margin: 20 0 0 450px;  
+	padding: 80px;  
+	background: white;  
+	border-radius: 15px ;
+}
+
+#students td, #students th {
+
+	border: 1px solid black;
+
+	padding: 8px;
+
+}
+
+
+#students tr:hover {background-color: grey;}
+
+#students th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: auto;
+	background-color: white;
+	color: black;
+}
+</style>
+
+</head>
+
+<body>
+
+​
+
+<table id="students">
+
+	<tr>
+		<th>Student ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>View Quiz Results</th>
+
+	</tr>
+	<tr>
+			{% for x,y,z in student_rows %}
+						<tr><td>{{x}}</td><td>{{y}}</td><td>{{z}}</td><td><a href="file:///Users/tac2197/school_git/IS211_Assignment12/templates/student/%7B%7Bx%7D%7D">View Results</a></td>
+				{% endfor %}
+				</tr>
+	
+	</table>
+	<p><a href="{{ url_for('add_student') }}">Add a student</a></p>
+	<style>
+		#quizzes {
+
+			font-family: Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 382px;  
+			margin: left;  
+			margin: 20 0 0 450px;  
+			padding: 80px;  
+			background: white;  
+			border-radius: 15px ;
+		}
+
+		#quizzes td, #quizzes th {
+
+			border: 1px solid black;
+
+			padding: 8px;
+
+		}
+
+
+		#quizzes tr:hover {background-color: grey;}
+
+		​
+
+		#quizzes th {
+
+			padding-top: 12px;
+
+			padding-bottom: 12px;
+
+			text-align: auto;
+
+			background-color: white;
+
+			color: black;
+
+		}
+
+		</style>
+		<table id="quizzes">
+
+			<tr>
+				<th>Quiz ID</th>
+				<th>Subject</th>
+				<th>Number of Questions</th>
+				<th>Date Given
+
+			</tr>
+			{% for a,b,c,d in quiz_rows %}
+						<tr><td>{{a}}</td><td>{{b}}</td><td>{{c}}</td><td>{{d}}</td>
+				{% endfor %}
+				</tr>
+			
+				<tr>
+			</table>
+			<p><a href="{{ url_for('add_quiz') }}">Add a quiz</a></p>
+			<p><a href="{{ url_for('add_result') }}">Add a result</a></p>
+			<style>
+	
+	
+
+	</body>
+	
+	
+	</html>
+	

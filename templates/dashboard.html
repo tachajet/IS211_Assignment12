@@ -53,21 +53,17 @@
 		<th>Student ID</th>
 		<th>First Name</th>
 		<th>Last Name</th>
+		<th>View Quiz Results</th>
 
 	</tr>
 	<tr>
-			{% for student in student_rows %}
-				{% for x in student %}
-						<tr><td>{{x}}</td><td>{{x}}</td><td>{{x}}</td></tr>
-					{% endfor %}
+			{% for x,y,z in student_rows %}
+						<tr><td>{{x}}</td><td>{{y}}</td><td>{{z}}</td><td><a href="/student/{{x}}">View Results</a></td>
 				{% endfor %}
-	<tr>
-			<td>placeholder</td>
-			<td>placeholder</td>
-			<td>placeholder</td>
-				
-		</tr>
+				</tr>
+	
 	</table>
+	<p><a href="{{ url_for('add_student') }}">Add a student</a></p>
 	<style>
 		#quizzes {
 
@@ -118,15 +114,21 @@
 				<th>Date Given
 
 			</tr>
-			<tr>
-					<td>placeholder</td>
-					<td>placeholder</td>
-					<td>placeholder</td>
-					<td>placeholder</td>
+			{% for a,b,c,d in quiz_rows %}
+						<tr><td>{{a}}</td><td>{{b}}</td><td>{{c}}</td><td>{{d}}</td>
+				{% endfor %}
 				</tr>
+			
 				<tr>
 			</table>
+			<p><a href="{{ url_for('add_quiz') }}">Add a quiz</a></p>
+			<p><a href="{{ url_for('add_result') }}">Add a result</a></p>
 			<style>
+	
+	
+
 	</body>
+	
+	
 	</html>
 	

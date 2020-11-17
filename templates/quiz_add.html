@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a Quiz</title>    
+	<style>body  
+	{  
+		margin: 0;  
+		padding: 0;  
+		background-color:black;  
+		font-family: 'Helvetica';  
+	}  
+	.Quiz_add{  
+			width: 382px;  
+			margin: auto;  
+			margin: 20 0 0 450px;  
+			padding: 80px;  
+			background: white;  
+			border-radius: 15px ;  
+			  
+	}  
+	h2{  
+		text-align: center;  
+		color: white;  
+		padding: 20px;  
+	}  
+	label{  
+		color: black;  
+		font-size: 17px;  
+	}  
+	#f_name{  
+		width: 300px;  
+		height: 30px;  
+		border: none;  
+		border-radius: 3px;  
+		padding-left: 8px;  
+	}  
+	#l_name{  
+		width: 300px;  
+		height: 30px;  
+		border: none;  
+		border-radius: 3px;  
+		padding-left: 8px;  
+		  
+	}  
+	#log{  
+		width: 300px;  
+		height: 30px;  
+		border: none;  
+		border-radius: 17px;  
+		padding-left: 7px;  
+		color: black;  
+	  
+	  
+	}  
+	span{  
+		color: white;  
+		font-size: 17px;  
+	}  
+	a{  
+		float: right;  
+		background-color: grey;  
+	}  
+
+</style>    
+</head>    
+<body>    
+
+	<h2>Add a Quiz</h2><br>    
+	<div class="Quiz_add">    
+	<form action="{{ url_for('add_quiz') }}" id="Quiz_add" method="post" >    
+		<label><b>Subject    
+		</b>    
+		</label>    
+		<input type="text" name="subject">    
+		<br><br>    
+		<label><b>Number of Questions   
+		</b>    
+		</label>    
+		<input type="text" name="q_num">    
+		<br><br>    
+		<label><b>Date Given   
+		</b>    
+		</label>    
+		<input type="text" name="date_given">    
+		<br><br>    
+		<input type="submit" name="Quiz_add" id="Quiz_add" value="Add a Quiz">  
+		  
+		<br><br>    
+	</form>     
+</div>    
+</body>    
+</html>

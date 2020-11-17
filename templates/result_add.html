@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Add a Result</title>    
+		<style>body  
+		{  
+			margin: 0;  
+			padding: 0;  
+			background-color:black;  
+			font-family: 'Helvetica';  
+		}  
+		.result_add{  
+				width: 382px;  
+				margin: auto;  
+				margin: 20 0 0 450px;  
+				padding: 80px;  
+				background: white;  
+				border-radius: 15px ;  
+				  
+		}  
+		h2{  
+			text-align: center;  
+			color: white;  
+			padding: 20px;  
+		}  
+		label{  
+			color: black;  
+			font-size: 17px;  
+		}  
+		#student_id{  
+			width: 300px;  
+			height: 30px;  
+			border: none;  
+			border-radius: 3px;  
+			padding-left: 8px;  
+		}  
+		#quiz{  
+			width: 300px;  
+			height: 30px;  
+			border: none;  
+			border-radius: 3px;  
+			padding-left: 8px;  
+		}  
+		#grade{  
+			width: 300px;  
+			height: 30px;  
+			border: none;  
+			border-radius: 3px;  
+			padding-left: 8px;  
+			  
+		}  
+		#log{  
+			width: 300px;  
+			height: 30px;  
+			border: none;  
+			border-radius: 17px;  
+			padding-left: 7px;  
+			color: black;  
+		  
+		  
+		}  
+		span{  
+			color: white;  
+			font-size: 17px;  
+		}  
+		a{  
+			float: right;  
+			background-color: grey;  
+		}  
+
+	</style>    
+	</head> 
+		
+	</body>
+	<body>
+	<h2>Add a Result</h2><br>    
+		<div class="result_add">    
+		<form action="{{ url_for('add_result') }}" id="result_add" method="post" >    
+			<label><b>Score   
+			</b>    
+			</label>    
+			<input type="text" name="score">
+			<br><br>
+			<label for="quiz">Choose a Quiz:</label>
+			<select id="quiz" name="quiz">
+			{% for x in quiz_list %}
+				<option value="{{x}}">{{x}}</option>
+				{% endfor %}
+				</select> 
+			<br><br>  
+			<label for="student_id">Choose a Student:</label>
+			<select id="student_id" name="student_id">
+			{% for a in student_list %}
+				<option value="{{a}}">{{a}}</option>
+				{% endfor %}
+			
+			</select> 
+			<input type="submit" name="result_add" id="result_add" value="Add a quiz result">  
+			  
+			<br><br>    
+		</form>     
+		</body>
+</html>

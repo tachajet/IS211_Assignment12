@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body  
+	{  
+		margin: 0;  
+		padding: 0;  
+		background-color:black;  
+		font-family: 'Helvetica';  
+	}  
+#results {
+
+	font-family: Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 382px;  
+	margin: left;  
+	margin: 20 0 0 450px;  
+	padding: 80px;  
+	background: white;  
+	border-radius: 15px ;
+}
+
+#students td, #students th {
+
+	border: 1px solid black;
+
+	padding: 8px;
+
+}
+
+
+#results tr:hover {background-color: grey;}
+
+#results th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: auto;
+	background-color: white;
+	color: black;
+}
+</style>
+
+</head>
+
+<body>
+
+​
+
+<table id="results">
+
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Quiz ID</th>
+		<th>Subject</th>
+		<th>Date</th>
+		<th>Score</th>
+
+	</tr>
+	<tr>
+			{% for a,b,c,d,e,f in results_row %}
+						<tr><td>{{a}}</td><td>{{b}}</td><td>{{c}}</td><td>{{d}}</td><td>{{e}}</td><td>{{f}}</td>
+				{% endfor %}
+				</tr>
+	
+	</table>
+	

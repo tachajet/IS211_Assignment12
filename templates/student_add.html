@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a Student</title>    
+	<style>body  
+	{  
+		margin: 0;  
+		padding: 0;  
+		background-color:black;  
+		font-family: 'Helvetica';  
+	}  
+	.student_add{  
+			width: 382px;  
+			margin: auto;  
+			margin: 20 0 0 450px;  
+			padding: 80px;  
+			background: white;  
+			border-radius: 15px ;  
+			  
+	}  
+	h2{  
+		text-align: center;  
+		color: white;  
+		padding: 20px;  
+	}  
+	label{  
+		color: black;  
+		font-size: 17px;  
+	}  
+	#f_name{  
+		width: 300px;  
+		height: 30px;  
+		border: none;  
+		border-radius: 3px;  
+		padding-left: 8px;  
+	}  
+	#l_name{  
+		width: 300px;  
+		height: 30px;  
+		border: none;  
+		border-radius: 3px;  
+		padding-left: 8px;  
+		  
+	}  
+	#log{  
+		width: 300px;  
+		height: 30px;  
+		border: none;  
+		border-radius: 17px;  
+		padding-left: 7px;  
+		color: black;  
+	  
+	  
+	}  
+	span{  
+		color: white;  
+		font-size: 17px;  
+	}  
+	a{  
+		float: right;  
+		background-color: grey;  
+	}  
+
+</style>    
+</head>    
+<body>    
+
+	<h2>Add a Student</h2><br>    
+	<div class="student_add">    
+	<form action="{{ url_for('add_student') }}" id="student_add" method="post" >    
+		<label><b>First Name    
+		</b>    
+		</label>    
+		<input type="text" name="f_name">    
+		<br><br>    
+		<label><b>Last Name    
+		</b>    
+		</label>    
+		<input type="text" name="l_name">    
+		<br><br>    
+		<input type="submit" name="student_add" id="student_add" value="Add a student">  
+		  
+		<br><br>    
+	</form>     
+</div>    
+</body>    
+</html>
